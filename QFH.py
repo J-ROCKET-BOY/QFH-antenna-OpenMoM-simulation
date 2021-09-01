@@ -43,35 +43,35 @@ def generateModel(parameter):
             modelData += "title = " + modelName + "\n"
 
             #feed point
-            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {0:.4f} {1:.4f} {2:.4f} {2:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,3*diaW/math.sqrt(2)/2,heiT)
+            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {1:.4f} {0:.4f} {2:.4f} {2:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,3*diaW/math.sqrt(2)/2,heiT)
             modelData += "feed = 1 0\n"
             modelData += "name = feed point\n"
 
             #top X wire
-            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {0:.4f} 0 {2:.4f} {2:.4f} 1\n".format(3*diaW/math.sqrt(2)/2,math.sqrt(2)*3*diaW/2,heiT)
+            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {2:.4f} 0 {3:.4f} {3:.4f} 1\n".format(3*diaW/math.sqrt(2)/2,math.sqrt(2)*3*diaW/2,-3*diaW/math.sqrt(2)/2,heiT)
             modelData += "name = top horizontal X1-0\n"
 
-            modelData += "geometry = 1 1 {0:.4f} {1:.4f} 0 0 {2:.4f} {2:.4f} {3:d}\n".format(math.sqrt(2)*3*diaW/2,diaX/2,heiT,math.floor( (diaX/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
+            modelData += "geometry = 1 1 {0:.4f} {1:.4f} 0 0 {2:.4f} {2:.4f} {3:d}\n".format(math.sqrt(2)*3*diaW/2, diaX/2, heiT, int( (diaX/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
             modelData += "name = top horizontal X1-1\n"
 
-            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {0:.4f} 0 {2:.4f} {2:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,-math.sqrt(2)*3*diaW/2,heiT)
+            modelData += "geometry = 1 1 {0:.4f} {1:.4f} {2:.4f} 0 {3:.4f} {3:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,-math.sqrt(2)*3*diaW/2,3*diaW/math.sqrt(2)/2,heiT)
             modelData += "name = top horizontal X2-0\n"
 
-            modelData += "geometry = 1 1 {0:.4f} {1:.4f} 0 0 {2:.4f} {2:.4f} {3:d}\n".format(-math.sqrt(2)*3*diaW/2,-diaX/2,heiT,math.floor( (diaX/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
+            modelData += "geometry = 1 1 {0:.4f} {1:.4f} 0 0 {2:.4f} {2:.4f} {3:d}\n".format(-math.sqrt(2)*3*diaW/2,-diaX/2,heiT,int( (diaX/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
             modelData += "name = top horizontal X2-1\n"
 
 
             #top Y wire
-            modelData += "geometry = 1 1 {0:.4f} 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} 1\n".format(3*diaW/math.sqrt(2)/2,math.sqrt(2)*3*diaW/2,heiT)
+            modelData += "geometry = 1 1 {0:.4f} 0 {1:.4f} {2:.4f} {3:.4f} {3:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,3*diaW/math.sqrt(2)/2,math.sqrt(2)*3*diaW/2,heiT)
             modelData += "name = top horizontal Y1-0\n"
 
-            modelData += "geometry = 1 1 0 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} {3:d}\n".format(math.sqrt(2)*3*diaW/2,diaY/2,heiT,math.floor( (diaY/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
+            modelData += "geometry = 1 1 0 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} {3:d}\n".format(math.sqrt(2)*3*diaW/2,diaY/2,heiT,int( (diaY/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
             modelData += "name = top horizontal Y1-1\n"
 
-            modelData += "geometry = 1 1 {0:.4f} 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} 1\n".format(-3*diaW/math.sqrt(2)/2,-math.sqrt(2)*3*diaW/2,heiT)
+            modelData += "geometry = 1 1 {0:.4f} 0 {1:.4f} {2:.4f} {3:.4f} {3:.4f} 1\n".format(3*diaW/math.sqrt(2)/2,-3*diaW/math.sqrt(2)/2,-math.sqrt(2)*3*diaW/2,heiT)
             modelData += "name = top horizontal Y2-0\n"
 
-            modelData += "geometry = 1 1 0 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} {3:d}\n".format(-math.sqrt(2)*3*diaW/2,-diaY/2,heiT,math.floor( (diaY/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
+            modelData += "geometry = 1 1 0 0 {0:.4f} {1:.4f} {2:.4f} {2:.4f} {3:d}\n".format(-math.sqrt(2)*3*diaW/2,-diaY/2,heiT,int( (diaY/2-math.sqrt(2)*3*diaW/2)/(3/2*diaW) ))
             modelData += "name = top horizontal Y2-1\n"
 
 
@@ -85,7 +85,7 @@ def generateModel(parameter):
                 Y2 = diaX/2*math.sin(math.pi*(i+1)/divN)
                 Z2 = heiT-heiX*(i+1)/divN
                 L  = math.sqrt(math.pow((X2-X1),2)+math.pow((Y2-Y1),2)+math.pow((Z2-Z1),2))
-                N  = math.floor(L/(3/2*diaW))
+                N  = int(L/(3/2*diaW))
 
                 #+X -> -X helical
                 modelData += "geometry = 1 1 {0:.4f} {3:.4f} {1:.4f} {4:.4f} {2:.4f} {5:.4f} {6}\n".format(X1,Y1,Z1,X2,Y2,Z2,N)
@@ -103,7 +103,7 @@ def generateModel(parameter):
                 Y2 =  diaY/2*math.cos(math.pi*(i+1)/divN)
                 Z2 = heiT-heiY*(i+1)/divN
                 L  = math.sqrt(math.pow((X2-X1),2)+math.pow((Y2-Y1),2)+math.pow((Z2-Z1),2))
-                N  = math.floor(L/(3/2*diaW))
+                N  = int(L/(3/2*diaW))
 
                 #+Y -> -Y helical
                 modelData += "geometry = 1 1 {0:.4f} {3:.4f} {1:.4f} {4:.4f} {2:.4f} {5:.4f} {6}\n".format(X1,Y1,Z1,X2,Y2,Z2,N)
@@ -121,7 +121,7 @@ def generateModel(parameter):
             Y2 = 0
             Z2 = heiT-heiX
             L  = math.sqrt(math.pow((X2-X1),2)+math.pow((Y2-Y1),2)+math.pow((Z2-Z1),2))
-            N  = math.floor(L/(3/2*diaW))
+            N  = int(L/(3/2*diaW))
             modelData += "geometry = 1 1 {0:.4f} {3:.4f} {1:.4f} {4:.4f} {2:.4f} {5:.4f} {6}\n".format(-X1,-Y1,Z1,-X2,-Y2,Z2,N)
             modelData += "name = X bottom\n"
 
@@ -133,7 +133,7 @@ def generateModel(parameter):
             Y2 = -diaY/2
             Z2 = heiT-heiY
             L  = math.sqrt(math.pow((X2-X1),2)+math.pow((Y2-Y1),2)+math.pow((Z2-Z1),2))
-            N  = math.floor(L/(3/2*diaW))
+            N  = int(L/(3/2*diaW))
             modelData += "geometry = 1 1 {0:.4f} {3:.4f} {1:.4f} {4:.4f} {2:.4f} {5:.4f} {6}\n".format(-X1,-Y1,Z1,-X2,-Y2,Z2,N)
             modelData += "name = Y bottom\n".format(i)
 
@@ -142,7 +142,7 @@ def generateModel(parameter):
                 baseModel += ".omm"
             with open(baseModel, mode = "r") as baseModelFile:
                 baseModelData = baseModelFile.read()
-                #境界条件から後ろを抜き出してコピー
+                #Extract the back from the boundary condition and copy it.
                 modelData += baseModelData[baseModelData.find("frequency"):]
 #                print(baseModelData)
 
